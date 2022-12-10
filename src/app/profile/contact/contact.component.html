@@ -6,13 +6,12 @@
                     <div class="col-md-9">
                         <div class="card mb-0" data-aos="zoom-in">
                             <div class="h4 text-center title">Contact Me</div>
+                            {{ model | json }}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card-body">
-                                        <form name="form" (ngSubmit)="f.form.valid ; f.resetForm()" #f="ngForm" novalidate>
-                                            <div class="p pb-3">
-                                                <strong>Feel free to contact me </strong>
-                                            </div>
+<!--here-->                                        <form name="form" (ngSubmit)="f.form.valid && submit(f) ; f.resetForm()" #f="ngForm" novalidate>
+                                            <form name="form" (ngSubmit)="f.form.valid && submit(f) ; f.resetForm()" #f="ngForm" novalidate></form>
                                             <div class="row mb-3">
                                                 <div class="col">
                                                     <div class="input-group">
@@ -47,13 +46,13 @@
                                             <div class="row mb-3">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <textarea class="form-control" name="message" placeholder="Your Message" [(ngModel)]="model.message" #message="ngModel" [ngClass]="{ 'is-invalid': f.submitted && message.invalid }" required></textarea>
+<!--here-->                                                        <textarea class="form-control" name="message" style="border:solid 1px #61afef;"placeholder="Your Message" [(ngModel)]="model.message" #message="ngModel" [ngClass]="{ 'is-invalid': f.submitted && message.invalid }" required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <button class="btn btn-primary" type="submit">Send</button>
+<!--here-->                                                    <button class="btn btn-primary" type="submit">Send</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -61,10 +60,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card-body">
-                                        <p class="mb-0">
-                                            <strong>Email</strong>
-                                        </p>
-                                        <p>tdelamater@gmail.com</p>
+                                        
+                                        <p>I'm always open to new opportunities so feel free to drop me a line.</p>
                                     </div>
                                 </div>
                             </div>

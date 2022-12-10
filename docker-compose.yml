@@ -1,0 +1,13 @@
+version: '3'
+services:
+  express:
+    image: tdelamater/mistythicket:local 
+    restart: always
+    ports:
+      - 8080:80
+
+  web:
+    build: .
+    image: tdelamater/mistythicketemail:local 
+    ports:
+      - 3000:3000

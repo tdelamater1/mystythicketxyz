@@ -5,10 +5,9 @@
 
 export const environment = {
   production: false,
-  //baseUrl : `${window.location.protocol}//${window.location.hostname}/portfolio/`,
-  //baseUrl : `http://localhost:4200/`,
-
+  apiUrl: ' http://localhost:3000'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
+import { MessagingService } from '../messaging.service';
 
 @Component({
   selector: 'app-experience',
@@ -10,7 +11,7 @@ export class ExperienceComponent implements OnInit {
 
 workexp: any
 
-  constructor(private profileService:ProfileService) { }
+  constructor(private profileService:ProfileService, private messagingService:MessagingService) { }
 
     ngOnInit() {
 
