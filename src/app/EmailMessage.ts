@@ -1,5 +1,6 @@
 export interface EmailMessage {
-    email:string
-    name:string
-    message:string
-  }
+  name:string
+  subject:string 
+  email:string    
+  message:string
+}

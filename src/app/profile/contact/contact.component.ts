@@ -11,6 +11,7 @@ import { EmailMessage } from '../../EmailMessage'
 export class ContactComponent implements OnInit {
  
   model: any = {};
+  infoMessage:String = ''
 
   constructor(private messagingService: MessagingService){}
 
@@ -19,17 +20,17 @@ export class ContactComponent implements OnInit {
   }
 
   submit(f: NgForm): void {
-    console.log('posting test message');
-    this.messagingService.testMessage().subscribe((response) => {console.log(response)});;
-    console.log('test message made');
 
     const payload:EmailMessage = {
-      email: this.model.email,
       name: this.model.name,
+      subject: this.model.subject,
+      email: this.model.email,
       message: this.model.message
     }
 
-    this.messagingService.postMessage(payload).subscribe((response) => {console.log(response)});
+    this.messagingService.postMessage(payload)
+      .subscribe((response) => {this.infoMessage = response.response});
+      
     f.resetForm();
   }
 

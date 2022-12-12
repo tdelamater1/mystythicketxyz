@@ -7,7 +7,6 @@ import { environment } from '../../environments/environment';
 import { EmailMessage } from '../EmailMessage';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,41 +18,17 @@ export class MessagingService {
   constructor(private http: HttpClient) { 
   }
 
-/*
-  curl -X POST http://localhost:3000/sendmail -H 'Content-Type: application/json' -d '{"email":"tdelamater@gmail.com","name":"Tyler D", "message":"Hello coder due."}'
- */
-
   postMessage(input: EmailMessage): Observable<any> {
     const body = JSON.stringify(input);
     const url = `${this.mailApi}/sendmail`;
     console.log(body);
     console.log(url);
-    console.log(environment.production);
+    console.log(`prod: ${environment.production}`);
 
     return this.http.post(url, body, this.httpOptions)
       .pipe(
         tap(_ => console.log('email posted')),
         catchError(this.handleError<EmailMessage[]>('postMessage', []))
-      );
-  }
-
-  // getEvent(id: string): Observable<TMEvent> {
-  //   const url = `${this.eventUrl}/${id}`;
-  //   return this.http.get<TMEvent>(url).pipe(
-  //     tap(_ => this.log(`fetched event id=${id}`)),
-  //     catchError(this.handleError<TMEvent>(`getEvent id=${id}`))
-  //   );
-  // }
-
-  testMessage(){
-    const url = `${this.mailApi}/test`;
-    console.log('test message');
-    console.log(url);
-    console.log(environment.production);
-    return this.http.get(url)
-      .pipe(
-        tap(_ => console.log('test made')),
-        catchError(this.handleError<EmailMessage[]>('testMessage', []))
       );
   }
 
