@@ -41,10 +41,43 @@ export class ProfileService {
     },
 
   ]
+  resumeurl = "https://github.com/tdelamater1/documents/blob/main/resume.pdf"
+
+  learningtopics = `Today my interests mostly include building upon, and modernizing, my current skill set. My learning journey is leading me to explore Spring Boot 3, 
+  Microservices, and DevOps toics including Kubernetes and Cloud. .
+  While my current focus is in backend development, I'm also sprending some time learning angular 14 (This current site is developed in Angular)
+  `
+  learningData: any = [
+    {
+      'id': '1',
+      'skill': 'Spring Boot 3',
+      'progress': '30%'
+    },
+    {
+      'id': '2',
+      'skill': 'Cloud (Azure)',
+      'progress': '30%'
+    },
+    {
+      'id': '2',
+      'skill': 'Microservices',
+      'progress': '20%'
+    },
+    {
+      'id': '4',
+      'skill': 'Kubernetes',
+      'progress': '15%'
+    },
+    {
+      'id': '5',
+      'skill': 'Angular (Latest)',
+      'progress': '10%'
+    },
+  ];
+
   about = ""
   about2 = `Professional Software Developer with a rekindled passion for technology. An analytical thinker; Compatible member of any team.
 Often called upon to be a team leader, SME, and teacher. Looking for exciting opportunities and self-actualization.`
-  resumeurl = "https://github.com/tdelamater1/documents/blob/main/resume.pdf"
 
   skillsData: any = [
     {
@@ -73,7 +106,6 @@ Often called upon to be a team leader, SME, and teacher. Looking for exciting op
       'progress': '60%'
     },
   ];
-
 
   educationData: any = [
     {
@@ -129,6 +161,11 @@ Often called upon to be a team leader, SME, and teacher. Looking for exciting op
   skills(): Observable<any> {
     // return this.http.get(this.baseUrl + 'skills');
     return this.skillsData;
+  }
+
+  learning(): Observable<any> {
+    // return this.http.get(this.baseUrl + 'skills');
+    return this.learningData;
   }
 
   getProjects(): Observable<any> {

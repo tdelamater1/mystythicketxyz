@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { LearningComponent } from './learning/learning.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { ProjectsComponent } from './projects/projects.component';
     ExperienceComponent,
     ContactComponent,
     ProjectsComponent,
+    LearningComponent,
   ],
  
 })
