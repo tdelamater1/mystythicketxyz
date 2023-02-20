@@ -10,7 +10,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card-body">
-<!--here-->                                        <form name="form" (ngSubmit)="f.form.valid && submit(f) ; f.resetForm()" #f="ngForm" novalidate>
+                                        <form name="form" (ngSubmit)="f.form.valid && submit(f) ; f.resetForm()" #f="ngForm" novalidate>
                                             <form name="form" (ngSubmit)="f.form.valid && submit(f) ; f.resetForm()" #f="ngForm" novalidate></form>
                                             <div class="row mb-3">
                                                 <div class="col">
@@ -46,13 +46,13 @@
                                             <div class="row mb-3">
                                                 <div class="col">
                                                     <div class="form-group">
-<!--here-->                                                        <textarea class="form-control" name="message" style="border:solid 1px #61afef;"placeholder="Your Message" [(ngModel)]="model.message" #message="ngModel" [ngClass]="{ 'is-invalid': f.submitted && message.invalid }" required></textarea>
+                                                        <textarea class="form-control" name="message" style="border:solid 1px #61afef;"placeholder="Your Message" [(ngModel)]="model.message" #message="ngModel" [ngClass]="{ 'is-invalid': f.submitted && message.invalid }" required></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-<!--here-->                                                    <button class="btn btn-primary" type="submit">Send</button>
+                                                    <button class="btn btn-primary" type="submit">Send</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -61,7 +61,6 @@
                                 <div class="col-md-6">
                                     
                                     <div class="card-body">
-                                        
                                         <p>I'm always open to new opportunities so feel free to drop me a line.</p>
                                     </div>
                                 </div>
