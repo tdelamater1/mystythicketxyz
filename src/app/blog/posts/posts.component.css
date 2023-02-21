@@ -1,0 +1,7 @@
+markdown ::ng-deep pre {
+  padding: 10px;
+  background-color: #282c34;
+}
+markdown ::ng-deep code {
+  color: #61afef;
+}

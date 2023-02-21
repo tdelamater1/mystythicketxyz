@@ -1,0 +1,45 @@
+.page-header-blog {
+  height: 40vh;
+  max-height: 400px;
+  padding: 0;
+  color: orange;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+}
+
+.page-header-blog .page-header-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.page-header-blog footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.page-header-blog .container {
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+}
+
+.page-header-blog .container > .content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 15px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  width: 100%;
+  max-width: 880px;
+}

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="page-content">
+  <app-blog-intro></app-blog-intro>
+  <div class="section" id="blog">
+    <div class="container">
+      <div class="content">
+        <div class="post" *ngFor="let post of posts; index as i">
+          <div class="card" data-aos="fade-up" data-aos-offset="10">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+                <div class="card-body">
+                  <h4>{{ post.title }}</h4>
+                  <p>{{ post.description }}</p>
+                  <a routerLink="{{ post.link }}">Read More >></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-blog-footer></app-blog-footer>
+</div>

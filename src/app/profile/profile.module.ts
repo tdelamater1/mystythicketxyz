@@ -18,6 +18,7 @@ import { LearningComponent } from './learning/learning.component';
     FormsModule,
     NgxPaginationModule
   ],
+  exports: [HeaderComponent],
   declarations: [
     ProfileComponent,
     HeaderComponent,
