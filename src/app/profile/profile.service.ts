@@ -13,7 +13,7 @@ export class ProfileService {
     private http: HttpClient
   ) { }
 
-  aboutprojects = `Unfortunatly, most of my professional work is tucked safely away behind corporate firewalls. However, here are a few of the public facing projects
+  aboutprojects = `Most of my professional work is tucked safely away behind corporate firewalls. However, here are a few of the public facing projects
   I did durring my time as a Web Developer at Getfused. Using the power of the waybackmachine (archive.org) we can go back to the good ol' days circa 2017.`
 
   projects:any = [
@@ -27,7 +27,7 @@ export class ProfileService {
     {
       id: 2,
       title: 'bostonprivate.com',
-      desc: `I worked on the website itself and putting content into the CMS. I also did integration work with salesforce APIs for lead generation. 
+      desc: `I worked on the website itself and putting content into the CMS. I also did integration work with salesforce APIs for lead generation.
       I also wrote a find ATM app using google maps APIs.`,
       link: 'https://web.archive.org/web/20180117170150/https://www.bostonprivate.com/',
       imgUrl: 'assets/images/002.png',
@@ -43,7 +43,7 @@ export class ProfileService {
   ]
   resumeurl = "https://github.com/tdelamater1/documents/blob/main/resume.pdf"
 
-  learningtopics = `Today my interests mostly include building upon, and modernizing, my current skill set. My learning journey is leading me to explore Spring Boot 3, 
+  learningtopics = `Today my interests mostly include building upon, and modernizing, my current skill set. My learning journey is leading me to explore Spring Boot 3,
   Microservices, and DevOps toics including Kubernetes and Cloud. .
   While my current focus is in backend development, I'm also sprending some time learning angular 14 (This current site is developed in Angular)
   `
@@ -71,7 +71,7 @@ export class ProfileService {
     {
       'id': '5',
       'skill': 'Angular (Latest)',
-      'progress': '10%'
+      'progress': '15%'
     },
   ];
 
@@ -88,7 +88,7 @@ Often called upon to be a team leader, SME, and teacher. Looking for exciting op
     {
       'id': '2',
       'skill': 'Linux',
-      'progress': '80%'
+      'progress': '85%'
     },
     {
       'id': '3',
@@ -121,29 +121,38 @@ Often called upon to be a team leader, SME, and teacher. Looking for exciting op
   exprienceData: any = [
     {
       id: 1,
+      company: 'American Airlines',
+      location: 'Fort Worth, TX',
+      timeline: '04/2023 to Present',
+      role: 'Sr. Developer, IT Applications',
+      work: `Currently serving multiple squads on a product team, providing technical leadership with near-term technical deliveries, implementations, and overcoming challenges. Upgrading applications off of end of service life software. Assisting in many facets of the technology team: Dev-ops, design, planning, code reviews, and production support.`
+
+    },
+    {
+      id: 2,
       company: 'DXC Technology',
-      location: 'American Airlines DFW HDQ',
-      timeline: '10/2019 to Present',
+      location: 'Forth Worth, TX',
+      timeline: '10/2019 to 04/2023',
       role: 'Software Developer',
       work: `Developed and maintained a critical application used in the airline industry, to ensure operations follows Federal Aviation Administration (FAA) and Union rules regarding crew member scheduling and utilization.
     Java/Spring development on GigaSpaces’ in-memory data grid, XAP. OLTP with IBM MQ Streams. Angular/JS front end, REST webservices.`
 
     },
     {
-      id: 2,
+      id: 3,
       company: 'Edaris Health',
       location: 'Irving Texas',
       timeline: '04/2018 - 02/2019',
       role: 'Software Developer/Lead',
       work: `Java/J2EE development in a cloud based (AWS) multi-tenant web application. The application is a healthcare portal for making appointments, accessing medical records, and communicating with your healthcare provider.
-    Developed front end using Apache Freemarker templates  
+    Developed front end using Apache Freemarker templates
     Utilized existing technologies used by the organization (Intersystems Ensemble and MUMPS) to pull data from the hospital EMR into the portal application.
     Worked on streamlining the registration process for new patients into the system from account creation, compliance forms, and the scheduling of appointments.
     Provided tier-2 support for production issues.
     Developed new features and bug fixes; Oversaw the deployment to the production environment.`
     },
     {
-      id: 3,
+      id: 4,
       company: 'Get Fused',
       location: 'Grapevine Texas',
       timeline: '02/2017 - 03/2018',
